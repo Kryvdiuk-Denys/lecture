@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Інженерія клієнтських веб-систем</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/index.css">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="shower list presentations-list">
+
+<header class="caption">
+    <h1>Інженерія клієнтських веб-систем</h1>
+    <p>Презентації з дисципліни "Інженерія клієнтських веб-систем". </p>
+    <label for="lecture-search" class="visually-hidden">Пошук лекції</label>
+    <input id="lecture-search" class="lecture-filter" type="search" placeholder="Знайти лекцію за темою..." autocomplete="off">
+</header>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-01.html">Лекція 1. Строга типізація у вебі: екосистема мови TypeScript</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-02.html">Лекція 2. Vue.js: Знайомство з фреймворком Vue.js</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-03.html">Лекція 3. Vue.js: Основи роботи з компонентами. Шаблони. Директиви</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-04.html">Лекція 4. Vue.js: Options API vs Composition API. Основи реактивності.</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-05.html">Лекція 5. Vue.js: Основи роботи з компонентами: props, event handling, watchers.</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-06.html">Лекція 6. Vue.js: Основи роботи з компонентами: v-model, forms, slots.</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-07.html">Лекція 7. Vue.js: Маршрутизація у Vue.js.</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-08.html">Лекція 8. Vue.js: Composables, повторне використання логіки зі станом, State manager
+            Pinia.</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-09.html">Лекція 9. Vue.js: Архітектурне проєктування клієнтських вебзастосунків: компонентна
+            модель, шарова
+            організація та модульна структура.</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-10.html">Лекція 10. React: React Fundamentals та ментальна модель React</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-11.html">Лекція 11. React: State, Effects та архітектура компонентів</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-12.html">Лекція 12. React: Робота з API та CRUD-застосунками</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-13.html">Лекція 13. React: Routing та архітектура React-застосунку</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-14.html">Лекція 14. React: Forms, Validation та Authentication</a>
+    </h2>
+</section>
+
+<section class="slide">
+    <h2 class="shout">
+        <a href="lecture-15.html">Лекція 15. React: State Management та Production React</a>
+    </h2>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/Computer-Science-Department-ChNU/client-web-systems" target="_blank">Fork me on
+        GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/index.js"></script>
+<script>
+    const lectureSearch = document.querySelector('#lecture-search');
+    const lectureSlides = [...document.querySelectorAll('.presentations-list > .slide')];
+
+    lectureSearch.addEventListener('input', () => {
+        const query = lectureSearch.value.trim().toLocaleLowerCase('uk');
+
+        lectureSlides.forEach((slide) => {
+            const matches = slide.textContent.toLocaleLowerCase('uk').includes(query);
+            slide.hidden = !matches;
+        });
+    });
+</script>
+
+</body>
+</html>
